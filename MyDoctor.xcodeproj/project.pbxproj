@@ -13,6 +13,10 @@
 		1635577419D76C3000CBE3BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1635577319D76C3000CBE3BE /* Images.xcassets */; };
 		1635577719D76C3000CBE3BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1635577519D76C3000CBE3BE /* LaunchScreen.xib */; };
 		1635578319D76C3000CBE3BE /* MyDoctorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635578219D76C3000CBE3BE /* MyDoctorTests.swift */; };
+		1635578D19D76D4500CBE3BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1635578C19D76D4500CBE3BE /* MapKit.framework */; };
+		1635578F19D76D6100CBE3BE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1635578E19D76D6100CBE3BE /* HealthKit.framework */; };
+		1635579819D7705100CBE3BE /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635579719D7705100CBE3BE /* ViewController2.swift */; };
+		1635595819D7CD5200CBE3BE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1635595719D7CD5200CBE3BE /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,12 @@
 		1635577C19D76C3000CBE3BE /* MyDoctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDoctorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1635578119D76C3000CBE3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1635578219D76C3000CBE3BE /* MyDoctorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoctorTests.swift; sourceTree = "<group>"; };
+		1635578C19D76D4500CBE3BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1635578E19D76D6100CBE3BE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		1635579019D76D6100CBE3BE /* MyDoctor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MyDoctor.entitlements; sourceTree = "<group>"; };
+		1635579719D7705100CBE3BE /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		1635595719D7CD5200CBE3BE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		1635595919D7D23B00CBE3BE /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1635578D19D76D4500CBE3BE /* MapKit.framework in Frameworks */,
+				1635578F19D76D6100CBE3BE /* HealthKit.framework in Frameworks */,
+				1635595819D7CD5200CBE3BE /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,9 @@
 		1635575E19D76C3000CBE3BE = {
 			isa = PBXGroup;
 			children = (
+				1635595719D7CD5200CBE3BE /* FacebookSDK.framework */,
+				1635578E19D76D6100CBE3BE /* HealthKit.framework */,
+				1635578C19D76D4500CBE3BE /* MapKit.framework */,
 				1635576919D76C3000CBE3BE /* MyDoctor */,
 				1635577F19D76C3000CBE3BE /* MyDoctorTests */,
 				1635576819D76C3000CBE3BE /* Products */,
@@ -77,8 +93,11 @@
 		1635576919D76C3000CBE3BE /* MyDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				1635579019D76D6100CBE3BE /* MyDoctor.entitlements */,
 				1635576C19D76C3000CBE3BE /* AppDelegate.swift */,
 				1635576E19D76C3000CBE3BE /* ViewController.swift */,
+				1635595919D7D23B00CBE3BE /* Bridge-Header.h */,
+				1635579719D7705100CBE3BE /* ViewController2.swift */,
 				1635577019D76C3000CBE3BE /* Main.storyboard */,
 				1635577319D76C3000CBE3BE /* Images.xcassets */,
 				1635577519D76C3000CBE3BE /* LaunchScreen.xib */,
@@ -161,6 +180,15 @@
 				TargetAttributes = {
 					1635576619D76C3000CBE3BE = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = R3S8P8V5KU;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1635577B19D76C3000CBE3BE = {
 						CreatedOnToolsVersion = 6.0;
@@ -175,6 +203,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 1635575E19D76C3000CBE3BE;
 			productRefGroup = 1635576819D76C3000CBE3BE /* Products */;
@@ -214,6 +243,7 @@
 			files = (
 				1635576F19D76C3000CBE3BE /* ViewController.swift in Sources */,
 				1635576D19D76C3000CBE3BE /* AppDelegate.swift in Sources */,
+				1635579819D7705100CBE3BE /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +366,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = MyDoctor/MyDoctor.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)/FacebookSDK/FBAudienceNetwork",
+					/Users/luizfernandosantiago/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = MyDoctor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyDoctor/Bridge-Header.h";
 			};
 			name = Debug;
 		};
@@ -346,9 +389,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = MyDoctor/MyDoctor.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)/FacebookSDK/FBAudienceNetwork",
+					/Users/luizfernandosantiago/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = MyDoctor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyDoctor/Bridge-Header.h";
 			};
 			name = Release;
 		};
