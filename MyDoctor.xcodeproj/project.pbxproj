@@ -17,6 +17,12 @@
 		1635578F19D76D6100CBE3BE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1635578E19D76D6100CBE3BE /* HealthKit.framework */; };
 		1635579819D7705100CBE3BE /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635579719D7705100CBE3BE /* ViewController2.swift */; };
 		1635595819D7CD5200CBE3BE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1635595719D7CD5200CBE3BE /* FacebookSDK.framework */; };
+		1635595C19D7F0F400CBE3BE /* MyDoctorImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1635595B19D7F0F400CBE3BE /* MyDoctorImg@2x.png */; };
+		1635596119D86A6C00CBE3BE /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635596019D86A6C00CBE3BE /* ViewControllerMap.swift */; };
+		1635596319D86DEA00CBE3BE /* ViewControllerMyDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635596219D86DEA00CBE3BE /* ViewControllerMyDoctor.swift */; };
+		1635596519D86E0300CBE3BE /* ViewControllerTableDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635596419D86E0300CBE3BE /* ViewControllerTableDrugs.swift */; };
+		1635596719D86E2200CBE3BE /* ViewControllerRembDrugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1635596619D86E2200CBE3BE /* ViewControllerRembDrugs.swift */; };
+		1635596919D8833700CBE3BE /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1635596819D8833700CBE3BE /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,12 @@
 		1635579719D7705100CBE3BE /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		1635595719D7CD5200CBE3BE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		1635595919D7D23B00CBE3BE /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		1635595B19D7F0F400CBE3BE /* MyDoctorImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MyDoctorImg@2x.png"; path = "../../../MyDoctorIMGs/MyDoctorImg@2x.png"; sourceTree = "<group>"; };
+		1635596019D86A6C00CBE3BE /* ViewControllerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
+		1635596219D86DEA00CBE3BE /* ViewControllerMyDoctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMyDoctor.swift; sourceTree = "<group>"; };
+		1635596419D86E0300CBE3BE /* ViewControllerTableDrugs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTableDrugs.swift; sourceTree = "<group>"; };
+		1635596619D86E2200CBE3BE /* ViewControllerRembDrugs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRembDrugs.swift; sourceTree = "<group>"; };
+		1635596819D8833700CBE3BE /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1635578D19D76D4500CBE3BE /* MapKit.framework in Frameworks */,
+				1635596919D8833700CBE3BE /* iAd.framework in Frameworks */,
 				1635578F19D76D6100CBE3BE /* HealthKit.framework in Frameworks */,
 				1635595819D7CD5200CBE3BE /* FacebookSDK.framework in Frameworks */,
 			);
@@ -72,6 +85,7 @@
 		1635575E19D76C3000CBE3BE = {
 			isa = PBXGroup;
 			children = (
+				1635596819D8833700CBE3BE /* iAd.framework */,
 				1635595719D7CD5200CBE3BE /* FacebookSDK.framework */,
 				1635578E19D76D6100CBE3BE /* HealthKit.framework */,
 				1635578C19D76D4500CBE3BE /* MapKit.framework */,
@@ -98,10 +112,15 @@
 				1635576E19D76C3000CBE3BE /* ViewController.swift */,
 				1635595919D7D23B00CBE3BE /* Bridge-Header.h */,
 				1635579719D7705100CBE3BE /* ViewController2.swift */,
+				1635596019D86A6C00CBE3BE /* ViewControllerMap.swift */,
+				1635596419D86E0300CBE3BE /* ViewControllerTableDrugs.swift */,
+				1635596619D86E2200CBE3BE /* ViewControllerRembDrugs.swift */,
+				1635596219D86DEA00CBE3BE /* ViewControllerMyDoctor.swift */,
 				1635577019D76C3000CBE3BE /* Main.storyboard */,
 				1635577319D76C3000CBE3BE /* Images.xcassets */,
 				1635577519D76C3000CBE3BE /* LaunchScreen.xib */,
 				1635576A19D76C3000CBE3BE /* Supporting Files */,
+				1635595A19D7F0CE00CBE3BE /* MyDoctorIMG */,
 			);
 			path = MyDoctor;
 			sourceTree = "<group>";
@@ -129,6 +148,14 @@
 				1635578119D76C3000CBE3BE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1635595A19D7F0CE00CBE3BE /* MyDoctorIMG */ = {
+			isa = PBXGroup;
+			children = (
+				1635595B19D7F0F400CBE3BE /* MyDoctorImg@2x.png */,
+			);
+			name = MyDoctorIMG;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1635577219D76C3000CBE3BE /* Main.storyboard in Resources */,
+				1635595C19D7F0F400CBE3BE /* MyDoctorImg@2x.png in Resources */,
 				1635577719D76C3000CBE3BE /* LaunchScreen.xib in Resources */,
 				1635577419D76C3000CBE3BE /* Images.xcassets in Resources */,
 			);
@@ -242,8 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1635576F19D76C3000CBE3BE /* ViewController.swift in Sources */,
+				1635596719D86E2200CBE3BE /* ViewControllerRembDrugs.swift in Sources */,
 				1635576D19D76C3000CBE3BE /* AppDelegate.swift in Sources */,
 				1635579819D7705100CBE3BE /* ViewController2.swift in Sources */,
+				1635596519D86E0300CBE3BE /* ViewControllerTableDrugs.swift in Sources */,
+				1635596119D86A6C00CBE3BE /* ViewControllerMap.swift in Sources */,
+				1635596319D86DEA00CBE3BE /* ViewControllerMyDoctor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

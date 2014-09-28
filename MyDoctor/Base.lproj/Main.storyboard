@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Screen-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="LoginScene" id="vXZ-lx-hvc" customClass="ViewController" customModule="MyDoctor" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScene" modalTransitionStyle="crossDissolve" id="vXZ-lx-hvc" userLabel="Login Screen" customClass="ViewController" customModule="MyDoctor" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,13 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem Vindo ao MyDoctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxJ-Ds-NtJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem Vindo ao MyDoctor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxJ-Ds-NtJ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="28"/>
+                                <color key="textColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="102" width="188" height="21"/>
+                                    <rect key="frame" x="16" y="102" width="288" height="57"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyX-6s-coc">
@@ -43,25 +43,18 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xT-VL-da9">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929292928" green="0.0" blue="0.239417142628992" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Login">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="137" y="312" width="38" height="30"/>
+                                    <rect key="frame" x="106" y="310" width="100" height="40"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yCt-fH-hxw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="jUc-ZA-pSa">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="16"/>
-                                <color key="textColor" red="0.98431372549999996" green="0.02954887728" blue="0.071459449810000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="46" y="358" width="235" height="36"/>
-                                </variation>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPL-or-xod" customClass="FBLoginView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -69,6 +62,24 @@
                                     <rect key="frame" x="56" y="358" width="200" height="100"/>
                                 </variation>
                             </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2014 Luiz Fernando Santiago. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="f7x-cb-u3c">
+                                <rect key="frame" x="20" y="439" width="441" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="527" width="281" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="jUc-ZA-pSa">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="16"/>
+                                <color key="textColor" red="0.98431372549999996" green="0.02954887728" blue="0.071459449810000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="43" y="466" width="235" height="36"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -77,8 +88,9 @@
                                 <exclude reference="eyX-6s-coc"/>
                                 <exclude reference="x9S-7J-RJY"/>
                                 <exclude reference="1xT-VL-da9"/>
-                                <exclude reference="jUc-ZA-pSa"/>
                                 <exclude reference="UPL-or-xod"/>
+                                <exclude reference="f7x-cb-u3c"/>
+                                <exclude reference="jUc-ZA-pSa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -87,12 +99,15 @@
                                 <include reference="eyX-6s-coc"/>
                                 <include reference="x9S-7J-RJY"/>
                                 <include reference="1xT-VL-da9"/>
-                                <include reference="jUc-ZA-pSa"/>
                                 <include reference="UPL-or-xod"/>
+                                <include reference="f7x-cb-u3c"/>
+                                <include reference="jUc-ZA-pSa"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="FZu-iq-cTR"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -106,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="1033.5" y="1032"/>
         </scene>
-        <!--View Controller2-->
+        <!--Menu Screen-->
         <scene sceneID="Sg6-Ai-ABp">
             <objects>
-                <viewController storyboardIdentifier="MainMenuScene" id="LRn-YH-UJB" userLabel="View Controller2" customClass="ViewController2" customModule="MyDoctor" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuScene" modalTransitionStyle="crossDissolve" id="LRn-YH-UJB" userLabel="Menu Screen" customClass="ViewController2" customModule="MyDoctor" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0cR-kz-Bug"/>
                         <viewControllerLayoutGuide type="bottom" id="WjR-xI-LFP"/>
@@ -124,19 +139,81 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="232" width="39" height="30"/>
+                                    <rect key="frame" x="141" y="435" width="39" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="rollBack:" destination="LRn-YH-UJB" eventType="touchUpInside" id="tXd-SM-IM2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scene 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjh-Rv-Zil">
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cfr-zT-WXt">
+                                <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                </variation>
+                            </adBannerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6p-NS-9S6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929292928" green="0.0" blue="0.239417142628992" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Buscar Clinicas e Hospitais">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="130" width="288" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ButtonMap:" destination="LRn-YH-UJB" eventType="touchUpInside" id="68e-6C-sUG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gq-S5-Rc5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Prinicpais Bulas">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="184" width="288" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ButtonTableDrugs:" destination="LRn-YH-UJB" eventType="touchUpInside" id="gpS-N3-8Jn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-7c-alD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cadastrar Meu Médico">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="238" width="288" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ButtonMyDoctor:" destination="LRn-YH-UJB" eventType="touchUpInside" id="2pX-7C-2zZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVC-no-Bht">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Meus Remédios">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="292" width="288" height="36"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ButtonMyDrugs:" destination="LRn-YH-UJB" eventType="touchUpInside" id="FY8-mm-ozD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Screen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjh-Rv-Zil">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="139" y="98" width="63" height="21"/>
+                                    <rect key="frame" x="109" y="72" width="102" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -144,23 +221,170 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="56t-rP-uzd"/>
+                                <exclude reference="Cfr-zT-WXt"/>
+                                <exclude reference="C6p-NS-9S6"/>
+                                <exclude reference="5gq-S5-Rc5"/>
+                                <exclude reference="dMu-7c-alD"/>
+                                <exclude reference="PVC-no-Bht"/>
                                 <exclude reference="Sjh-Rv-Zil"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="56t-rP-uzd"/>
+                                <include reference="Cfr-zT-WXt"/>
+                                <include reference="C6p-NS-9S6"/>
+                                <include reference="5gq-S5-Rc5"/>
+                                <include reference="dMu-7c-alD"/>
+                                <include reference="PVC-no-Bht"/>
                                 <include reference="Sjh-Rv-Zil"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="kMs-Fs-qoe"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="iAdBanner" destination="Cfr-zT-WXt" id="g44-XG-wpf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESa-98-JGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1599" y="1024"/>
+            <point key="canvasLocation" x="1593" y="1032"/>
+        </scene>
+        <!--Credenciamento Médico-->
+        <scene sceneID="oaK-Y4-enj">
+            <objects>
+                <viewController storyboardIdentifier="MyDoctorScene" id="RUI-uO-9XD" userLabel="Credenciamento Médico" customClass="ViewControllerMyDoctor" customModule="MyDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b6F-6D-X82"/>
+                        <viewControllerLayoutGuide type="bottom" id="SBc-OH-B0v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zJH-AC-qCm">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QyB-kY-M1d"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udn-6b-F7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2263.5" y="1284"/>
+        </scene>
+        <!--Lembrete de Remédio-->
+        <scene sceneID="4yF-Me-vrm">
+            <objects>
+                <viewController storyboardIdentifier="RemeberDrugsScene" id="3Ol-yh-quK" userLabel="Lembrete de Remédio" customClass="ViewControllerRembDrugs" customModule="MyDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I8j-Ty-s1r"/>
+                        <viewControllerLayoutGuide type="bottom" id="5n3-mK-rpN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EDS-cA-mnW">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YN8-EI-zew"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZy-Se-UK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2263.5" y="1936"/>
+        </scene>
+        <!--Busca de Clinica e Hospitais-->
+        <scene sceneID="bxv-Pt-Byt">
+            <objects>
+                <viewController storyboardIdentifier="MapViewScene" id="I2i-EO-uhb" userLabel="Busca de Clinica e Hospitais" customClass="ViewControllerMap" customModule="MyDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zXS-Sb-fa8"/>
+                        <viewControllerLayoutGuide type="bottom" id="HR4-pg-OdN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="30s-ew-yYu">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S3f-xa-Kbk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="I2i-EO-uhb" id="5wO-8K-7pt"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="S3f-xa-Kbk"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="S3f-xa-Kbk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="c70-xO-5vQ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="S3f-xa-Kbk" id="aDd-DR-DXJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qse-C3-Zfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2263.5" y="-26"/>
+        </scene>
+        <!--Principais Bulas-->
+        <scene sceneID="RAG-pH-m3d">
+            <objects>
+                <viewController storyboardIdentifier="TableDrugsScene" id="OFH-X5-PSU" userLabel="Principais Bulas" customClass="ViewControllerTableDrugs" customModule="MyDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ADX-l5-Qv9"/>
+                        <viewControllerLayoutGuide type="bottom" id="vKh-yU-de4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPq-uw-xx2">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="QkG-kO-rWF">
+                                <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                </variation>
+                            </adBannerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kwA-ed-XcG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="QkG-kO-rWF"/>
+                                <exclude reference="kwA-ed-XcG"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="QkG-kO-rWF"/>
+                                <include reference="kwA-ed-XcG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="3fZ-Fy-JlN"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ko-Ct-H9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2263.5" y="614"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b43-g0-AXw">
@@ -174,12 +398,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="MZB-E0-keX"/>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="9BZ-CH-B3K"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcp-jk-V1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="1024"/>
+            <point key="canvasLocation" x="445.5" y="1032"/>
         </scene>
     </scenes>
 </document>
