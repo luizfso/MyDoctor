@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eee-UW-pCb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Eee-UW-pCb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -124,7 +124,7 @@
         <!--Menu Screen-->
         <scene sceneID="Sg6-Ai-ABp">
             <objects>
-                <viewController storyboardIdentifier="MainMenuScene" modalTransitionStyle="crossDissolve" id="LRn-YH-UJB" userLabel="Menu Screen" customClass="ViewController2" customModule="MyDoctor" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenuScene" modalTransitionStyle="crossDissolve" id="LRn-YH-UJB" userLabel="Menu Screen" customClass="ViewControllerMenu" customModule="MyDoctor" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0cR-kz-Bug"/>
                         <viewControllerLayoutGuide type="bottom" id="WjR-xI-LFP"/>
@@ -133,18 +133,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56t-rP-uzd">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Voltar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="141" y="435" width="39" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="rollBack:" destination="LRn-YH-UJB" eventType="touchUpInside" id="tXd-SM-IM2"/>
-                                </connections>
-                            </button>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cfr-zT-WXt">
                                 <rect key="frame" x="0.0" y="-50" width="320" height="50"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -216,28 +204,51 @@
                                     <rect key="frame" x="109" y="72" width="102" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ey-dp-Lku">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="464" width="72" height="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="RollBackButton:" destination="LRn-YH-UJB" eventType="touchUpInside" id="W9f-F2-nPI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCD-sf-kzn" customClass="FBLoginView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="96" y="464" width="200" height="46"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="56t-rP-uzd"/>
                                 <exclude reference="Cfr-zT-WXt"/>
                                 <exclude reference="C6p-NS-9S6"/>
                                 <exclude reference="5gq-S5-Rc5"/>
                                 <exclude reference="dMu-7c-alD"/>
                                 <exclude reference="PVC-no-Bht"/>
                                 <exclude reference="Sjh-Rv-Zil"/>
+                                <exclude reference="1ey-dp-Lku"/>
+                                <exclude reference="lCD-sf-kzn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="56t-rP-uzd"/>
                                 <include reference="Cfr-zT-WXt"/>
                                 <include reference="C6p-NS-9S6"/>
                                 <include reference="5gq-S5-Rc5"/>
                                 <include reference="dMu-7c-alD"/>
                                 <include reference="PVC-no-Bht"/>
                                 <include reference="Sjh-Rv-Zil"/>
+                                <include reference="1ey-dp-Lku"/>
+                                <include reference="lCD-sf-kzn"/>
                             </mask>
                         </variation>
                     </view>
@@ -248,6 +259,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="fbLoginView" destination="lCD-sf-kzn" id="Tlb-jk-cGZ"/>
                         <outlet property="iAdBanner" destination="Cfr-zT-WXt" id="g44-XG-wpf"/>
                     </connections>
                 </viewController>
@@ -264,8 +276,36 @@
                         <viewControllerLayoutGuide type="bottom" id="SBc-OH-B0v"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zJH-AC-qCm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QC-bI-Wf7">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="502" width="72" height="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="RollBackButton:" destination="RUI-uO-9XD" eventType="touchUpInside" id="CUL-fn-QwR"/>
+                                    <action selector="rollBack:" destination="LRn-YH-UJB" eventType="touchUpInside" id="enS-Ng-M0F"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7QC-bI-Wf7"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7QC-bI-Wf7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="QyB-kY-M1d"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -284,8 +324,36 @@
                         <viewControllerLayoutGuide type="bottom" id="5n3-mK-rpN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EDS-cA-mnW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xg-QJ-aem">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="502" width="72" height="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="RollBackButton:" destination="3Ol-yh-quK" eventType="touchUpInside" id="nfZ-Nz-q6l"/>
+                                    <action selector="rollBack:" destination="LRn-YH-UJB" eventType="touchUpInside" id="6ko-xf-Pwy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5Xg-QJ-aem"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5Xg-QJ-aem"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="YN8-EI-zew"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -304,27 +372,45 @@
                         <viewControllerLayoutGuide type="bottom" id="HR4-pg-OdN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="30s-ew-yYu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S3f-xa-Kbk">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S3f-xa-Kbk">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="I2i-EO-uhb" id="5wO-8K-7pt"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QD-bt-Pqi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="502" width="72" height="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="RollBackButton:" destination="I2i-EO-uhb" eventType="touchUpInside" id="quu-6O-me0"/>
+                                    <action selector="rollBack:" destination="LRn-YH-UJB" eventType="touchUpInside" id="z1h-Bg-aUO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="S3f-xa-Kbk"/>
+                                <exclude reference="3QD-bt-Pqi"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="S3f-xa-Kbk"/>
+                                <include reference="3QD-bt-Pqi"/>
                             </mask>
                         </variation>
                     </view>
@@ -348,6 +434,7 @@
                         <viewControllerLayoutGuide type="bottom" id="vKh-yU-de4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aPq-uw-xx2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="QkG-kO-rWF">
@@ -356,25 +443,42 @@
                                     <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 </variation>
                             </adBannerView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kwA-ed-XcG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kwA-ed-XcG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="456"/>
                                 </variation>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6H-BS-Apz">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.94491792929999996" green="0.0" blue="0.23941714259999999" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="464" width="67" height="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="RollBackButton:" destination="OFH-X5-PSU" eventType="touchUpInside" id="JN0-a9-WUJ"/>
+                                    <action selector="rollBack:" destination="LRn-YH-UJB" eventType="touchUpInside" id="iNF-gV-nij"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="QkG-kO-rWF"/>
                                 <exclude reference="kwA-ed-XcG"/>
+                                <exclude reference="j6H-BS-Apz"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="QkG-kO-rWF"/>
                                 <include reference="kwA-ed-XcG"/>
+                                <include reference="j6H-BS-Apz"/>
                             </mask>
                         </variation>
                     </view>
@@ -389,8 +493,11 @@
         <!--Navigation Controller-->
         <scene sceneID="b43-g0-AXw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eee-UW-pCb" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Eee-UW-pCb" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CgI-hz-f7J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
