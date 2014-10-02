@@ -46,6 +46,10 @@
 	<string>346793438820905</string>
 	<key>FacebookDisplayName</key>
 	<string>MyDoctor</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

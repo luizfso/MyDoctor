@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class ViewController: UIViewController, FBLoginViewDelegate {
 
@@ -26,7 +27,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
         if textfieldUsername.text == user &&
         textfieldPassword.text == pass
         {
-            let MainMenuScene = self.storyboard?.instantiateViewControllerWithIdentifier("MainMenuScene") as ViewController2
+            let MainMenuScene = self.storyboard?.instantiateViewControllerWithIdentifier("MainMenuScene") as ViewControllerMenu
             self.navigationController?.pushViewController(MainMenuScene, animated: true)
             textfieldUsername.resignFirstResponder()
             textfieldPassword.resignFirstResponder()
@@ -59,7 +60,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
         println("User Logged In")
         println("This is where you perform a segue.")
-        let MainMenuScene = self.storyboard?.instantiateViewControllerWithIdentifier("MainMenuScene") as ViewController2
+        let MainMenuScene = self.storyboard?.instantiateViewControllerWithIdentifier("MainMenuScene") as ViewControllerMenu
         self.navigationController?.pushViewController(MainMenuScene, animated: true)
     }
     

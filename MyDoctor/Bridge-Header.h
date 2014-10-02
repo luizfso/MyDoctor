@@ -9,5 +9,6 @@
 #ifndef MyDoctor_BridgeHeader_h
 #define MyDoctor_BridgeHeader_h
 #import <FacebookSDK/FacebookSDK.h>
+#import <iAd/iAd.h>
 
 #endif

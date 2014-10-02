@@ -378,7 +378,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S3f-xa-Kbk">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <rect key="frame" x="0.0" y="51" width="320" height="472"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="I2i-EO-uhb" id="5wO-8K-7pt"/>
@@ -392,25 +392,40 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="502" width="72" height="46"/>
+                                    <rect key="frame" x="16" y="20" width="72" height="32"/>
                                 </variation>
                                 <connections>
                                     <action selector="RollBackButton:" destination="I2i-EO-uhb" eventType="touchUpInside" id="quu-6O-me0"/>
                                     <action selector="rollBack:" destination="LRn-YH-UJB" eventType="touchUpInside" id="z1h-Bg-aUO"/>
                                 </connections>
                             </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aN7-74-X6Z">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Seta My Location" id="T1J-yX-TrK">
+                                        <connections>
+                                            <action selector="findMyLocation:" destination="I2i-EO-uhb" id="jOO-tN-TDs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                </variation>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="S3f-xa-Kbk"/>
                                 <exclude reference="3QD-bt-Pqi"/>
+                                <exclude reference="aN7-74-X6Z"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="S3f-xa-Kbk"/>
                                 <include reference="3QD-bt-Pqi"/>
+                                <include reference="aN7-74-X6Z"/>
                             </mask>
                         </variation>
                     </view>

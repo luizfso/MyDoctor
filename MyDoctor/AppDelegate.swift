@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MapKit
+import iAd
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MKMapViewDelegate, ADBannerViewDelegate {
 
     var window: UIWindow?
 
